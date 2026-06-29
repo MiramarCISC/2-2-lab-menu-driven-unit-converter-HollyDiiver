@@ -38,27 +38,25 @@ bool isValidMenuChoice(int choice) {
     if(choice >= EXIT_CHOICE && choice <= CELSIUS_TO_FAHRENHEIT) {
         return true;
     }
-    else {
+    
+    else {                          //Aiden Bestul: I spaced out the else statement to make it easier to read
         return false;
     }
 }
 
 bool requiresNonNegativeValue(int choice) {
-    // Length and weight conversions cannot use negative values.
-    // Temperature conversions may use negative values.
-    // : return true for choices 1 through 4.
+    
     if(choice >= INCHES_TO_CENTIMETERS && choice <= KILOGRAMS_TO_POUNDS) {
         return true;
     }
+    
     else {
         return false;
     }
-}
+}                                       // Also deleted instructions to make it more cleaner
 
 bool isValidValueForChoice(int choice, double value) {
-    // 1. Invalid menu choices should return false.
-    // 2. Length and weight conversions should reject negative values.
-    // 3. Temperature conversions should allow negative values.
+
     if(!isValidMenuChoice(choice)) {
         return false;
     }
